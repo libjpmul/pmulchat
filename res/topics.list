@@ -1,0 +1,19 @@
+# ---[ pmulchat topic list ]--- #
+
+# Each topic is on the format [Topic name]|<multicast group address>
+
+# The name may contain any UTF-8 character except '&' and cannot start with '#'.
+# They may not be bigger than 255 bytes.
+
+# If dynamic multicast is used, the multicast group address is ignored and may be left blank.
+
+# Some example topics:
+
+pmulchat&239.1.1.17
+General Discussion&239.1.1.18
+Other&239.1.1.19
+
+# Comments are entire lines starting with #.
+# '# valid comment'
+# 'topc|addr #something' Not a valid comment!
+# ' # somthing' Not a valid comment!
