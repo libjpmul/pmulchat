@@ -113,7 +113,7 @@ public class ChatConfigurationModel {
 	/**
 	 * Whether to use persistant groups with dynamic multicast.
 	 */
-	private static boolean usePersistantGroups = true;
+	private static boolean usePersistantGroups = false;
 	/**
 	 * Default time to live of ACP142 messages
 	 */
