@@ -911,7 +911,16 @@ public class MainView extends JFrame implements ActionListener, KeyListener {
     private void sendMessage(String msg) {
         // Insert line breaks
         for (int j = 34; j < msg.length(); j += 54) {
-            msg = msg.substring(0, j) + "<br>" + msg.substring(j, msg.length());
+            int i = j - 15; // Don't backtrack more than 15 characters.
+            while ( msg.charAt(j) != ' ' && j > i ) {
+                --j; // Backtrack to the next space to insert newline.
+            }
+            if ( j == i ) {
+                // If no space was found at a resounable place, insert '-' and split a word
+                msg = msg.substring(0, j) + "-<br>" + msg.substring(j, msg.length());
+            } else {
+                msg = msg.substring(0, j) + "<br>" + msg.substring(j, msg.length());
+            }
         }
 
         // Checks comment fields current text length
