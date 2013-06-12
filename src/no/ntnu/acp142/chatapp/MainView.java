@@ -917,6 +917,7 @@ public class MainView extends JFrame implements ActionListener, KeyListener {
             }
             if ( j == i ) {
                 // If no space was found at a resounable place, insert '-' and split a word
+                j += 14;
                 msg = msg.substring(0, j) + "-<br>" + msg.substring(j, msg.length());
             } else {
                 msg = msg.substring(0, j) + "<br>" + msg.substring(j, msg.length());
