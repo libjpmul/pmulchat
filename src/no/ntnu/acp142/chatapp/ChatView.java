@@ -183,6 +183,9 @@ public class ChatView extends JPanel implements ListSelectionListener, PropertyC
                 component.setText(value.toString());
                 component.setEditable(false);
 
+                JScrollBar bar = scrollPaneChat.getVerticalScrollBar();
+                bar.setValue(bar.getMaximum());
+
                 return component;
             }
 
